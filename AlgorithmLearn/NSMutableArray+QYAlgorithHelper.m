@@ -86,6 +86,7 @@
     if (startIndex >= endIndex) {
         return;
     }
+    [[self class] assetSortBlock:sortBlock];
     NSInteger mid = (startIndex + endIndex)/2;
     //将数组左边划分成两个小数组
     [self megerSortWithStart:startIndex
@@ -96,7 +97,7 @@
                     endIndex:endIndex
                        block:sortBlock];
     //并归 左右两个小数组
-    if (self[mid] > self[mid + 1])
+    if (!sortBlock(self[mid],self[mid + 1]))
     {
         [self megerStartIndex:startIndex
                      midIndex:mid

@@ -31,7 +31,7 @@
 //        return obj1.integerValue <= obj2.integerValue;
 //    }];
     [array megerSortWitBlock:^BOOL(NSNumber *obj1, NSNumber *obj2) {
-        return obj1.integerValue <= obj2.integerValue;
+        return obj1.integerValue > obj2.integerValue;
     }];
     [array printArray];
 
