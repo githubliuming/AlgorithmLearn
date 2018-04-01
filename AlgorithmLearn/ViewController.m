@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSMutableArray<NSNumber *> * array = [@[@5,@6,@2,@3,@1,@7,@29] mutableCopy];
+    NSMutableArray<NSNumber *> * array = [@[@5,@6,@2,@3,@1,@7,@29,@8] mutableCopy];
 //    [array selectSortWithsortBlock:^BOOL(NSNumber *obj1, NSNumber *obj2) {
 //        return obj1.integerValue <= obj2.integerValue;
 //    }];
@@ -27,7 +27,10 @@
 //        return obj1.integerValue <= obj2.integerValue;
 //    }];
     
-    [array bubbleSortWithSortBlock:^BOOL(NSNumber *obj1, NSNumber *obj2) {
+//    [array bubbleSortWithSortBlock:^BOOL(NSNumber *obj1, NSNumber *obj2) {
+//        return obj1.integerValue <= obj2.integerValue;
+//    }];
+    [array megerSortWitBlock:^BOOL(NSNumber *obj1, NSNumber *obj2) {
         return obj1.integerValue <= obj2.integerValue;
     }];
     [array printArray];
